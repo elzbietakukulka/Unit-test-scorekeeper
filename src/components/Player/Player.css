@@ -1,0 +1,32 @@
+.Player {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.Player__name {
+	padding: 5px;
+	border: 1px solid #2c2c54;
+	width: 150px;
+	min-height: 41px;
+	font-size: 25px;
+	background-color: #474787;
+	color: #ffda79;
+
+}
+.Player__score, .Player__button, .Player__remove {
+	padding: 5px;
+	border: 1px solid #2c2c54;
+	width: 50px;
+	text-align: center;
+	background-color: #ccae62;
+	color: black;
+	color: #b33939;
+
+}
+.Player__remove {
+	color: black;
+	cursor: pointer;
+}
+.Player__button {
+	cursor: pointer;
+}

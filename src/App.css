@@ -1,0 +1,11 @@
+* {
+	box-sizing: border-box;
+}
+.App {
+	background-color: #d1ccc0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+}
