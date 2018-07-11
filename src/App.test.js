@@ -43,13 +43,24 @@ it('should add newPlayer to the state', () => {
 });
 
 it('should remove Player from the state', () => {
-	const appComponent = mount(<App />);
+	const appComponent = shallow(<App />);
 
-	const removal = appComponent.find(Player).first();
-	const onPlayerRemove = removal.find('.Player_remove');
-	onPlayerRemove.simulate('click');
+	let players = [
+	    {
+	      name: 'Kunegunda',
+	      score: 5,
+	    },
+	    {
+	      name: 'Antoś',
+	      score: 0,
+	    },  
+	];
 
-	const players = appComponent.state('players');
+	appComponent.setState({ players });
+	const onPlayerRemove = appComponent.find(PlayersList).prop('onPlayerRemove');
+  	onPlayerRemove(0);
 
-	expect(players.length).toEqual(3);
+	const playersAfterRemove = appComponent.state('players');
+
+  	expect('Antoś').toEqual(playersAfterRemove[0].name);
 });

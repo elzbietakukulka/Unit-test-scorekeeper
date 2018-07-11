@@ -6,7 +6,7 @@ it('renders without crashing', () => {
   shallow(<Player />);
 });
 
-it('renders correct name', () => {
+it('renders correct  name', () => {
 	const playerNamePassed = 'Ania';
 	const playerComponent = shallow(<Player name={playerNamePassed} />);
 
