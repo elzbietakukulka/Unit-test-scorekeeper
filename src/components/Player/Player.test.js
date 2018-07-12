@@ -28,7 +28,7 @@ it('should call onPlayerScoreChange with 1 when plus button is clicked', () => {
   	const mockedOnPlayerScoreChange = jest.fn();
   	const playerComponent = shallow(<Player onPlayerScoreChange={mockedOnPlayerScoreChange} />);
 
-  	const plusButton = playerComponent.find('.Player__button');
+  	const plusButton = playerComponent.find('.Player__button').at(0);
 
   	plusButton.simulate('click');
 
